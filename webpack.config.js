@@ -3,15 +3,19 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const glob = require('glob');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const PurgeCSSPlugin = require('purgecss-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 
 module.exports = {
     mode:'development',
-    entry: './main/main.js',
+  entry: {
+    main: './main/main.js',
+      
+  },
     output: {
     path: path.resolve(__dirname, 'public'),
-      filename: 'dist.js',
+      filename: '[name].[chunkhash].js',
 
   },
   
@@ -71,6 +75,7 @@ module.exports = {
     new PurgeCSSPlugin({
       paths: glob.sync(path.join(__dirname,'index.html') ,  { nodir: true }),
     }),
+    new CleanWebpackPlugin(),
     ]
 };
 

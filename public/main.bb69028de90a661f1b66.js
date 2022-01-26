@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("__webpack_require__(/*! ./style.scss */ \"./main/style.scss\");\n\n//# sourceURL=webpack://webpack-training/./main/main.js?");
+eval("__webpack_require__(/*! ./style.scss */ \"./main/style.scss\");\n\nalert('hello');\nalert('hello change');\n\n//# sourceURL=webpack://webpack-training/./main/main.js?");
 
 /***/ }),
 
