@@ -1,1 +1,10 @@
-body{background-color:red}
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./main/style.scss ***!
+  \**********************************************************************************************************/
+body {
+  background-color: red;
+}
+
+.one {
+  color: red;
+}
